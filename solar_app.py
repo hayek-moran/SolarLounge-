@@ -9,11 +9,11 @@ st.set_page_config(page_title="Solar Lounge | smart ems", layout="wide")
 
 # --- backend logic & constants ---
 # updated values from pvsyst report v3
-solar_capacity = 13.6  # kwp [cite: 913]
+solar_capacity = 13.6  # kwp 
 batt_capacity = 14.3  # kwh nominal
 capex = 95000  # ils (estimated for optimized system)
 annual_savings = 13360  # ils (estimated from increased production)
-co2_factor = 0.699  # kg co2 saved per kwh (israeli grid avg) [cite: 1382]
+co2_factor = 0.699  # kg co2 saved per kwh (israeli grid avg) 
 
 # --- lowercase documentation & style ---
 # initialize session state for simulation if needed
@@ -43,7 +43,7 @@ with tab1:
     c1.metric("battery level", f"{curr_batt}%", "stable")
     c2.metric("current production", f"{solar_capacity * 0.7:.1f} kw", "optimal")
     c3.metric("household load", "1.9 kw", "low")
-    c4.metric("solar fraction", "56.6%", "high") # updated sf [cite: 955]
+    c4.metric("solar fraction", "56.6%", "high") 
 
     # alerts logic
     if curr_batt < 20:
@@ -59,7 +59,7 @@ with tab1:
 
     solar_gen = [max(0, solar_capacity * weather_multiplier * np.sin(np.pi * (h - 6) / 12)) if 6 <= h <= 18 else 0 for h
                  in range(24)]
-    # load profile adjusted to meet the 16,542 kwh yearly target [cite: 955]
+    # load profile adjusted to meet the 16,542 kwh yearly target 
     house_load = [1.5 + 2.2 * np.exp(-(h - 12) ** 2 / 16) + 3.8 * np.exp(-(h - 19) ** 2 / 9) for h in range(24)]
 
     soc_list, current_soc = [], 0.78
@@ -115,7 +115,7 @@ with tab3:
     st.subheader("🌍 sustainability & roi")
 
     m1, m2, m3 = st.columns(3)
-    total_produced = 23443 # annual produced energy [cite: 955]
+    total_produced = 23443 # annual produced energy 
 
     m1.metric("co2 saved", f"{total_produced * co2_factor / 1000:.1f} tons")
     m2.metric("trees planted eq.", f"{int(total_produced / 20)} trees")
@@ -145,6 +145,6 @@ with tab4:
     csv = log_df.to_csv(index=False).encode('utf-8')
     st.download_button("📥 download technical log", data=csv, file_name='solar_lounge_telemetry.csv')
 
-# summary footer
+#  footer
 st.divider()
 st.caption("solar lounge | designed by Moran Hayek")
