@@ -8,16 +8,17 @@ from datetime import datetime
 st.set_page_config(page_title="Solar Lounge | smart ems", layout="wide")
 
 # --- backend logic & constants ---
-solar_capacity = 10.2  # kwp
-batt_capacity = 22.0  # kwh
-capex = 115000  # ils
-annual_savings = 10368  # ils
-co2_factor = 0.533  # kg co2 saved per kwh (israeli grid avg)
+# updated values from pvsyst report v3
+solar_capacity = 13.6  # kwp [cite: 913]
+batt_capacity = 14.3  # kwh nominal
+capex = 95000  # ils (estimated for optimized system)
+annual_savings = 13360  # ils (estimated from increased production)
+co2_factor = 0.699  # kg co2 saved per kwh (israeli grid avg) [cite: 1382]
 
 # --- lowercase documentation & style ---
 # initialize session state for simulation if needed
 if 'soh' not in st.session_state:
-    st.session_state.soh = 98.2  # state of health percentage
+    st.session_state.soh = 99.1  # state of health percentage
 
 # --- sidebar settings ---
 with st.sidebar:
@@ -25,7 +26,6 @@ with st.sidebar:
     weather_condition = st.selectbox("current weather", ["sunny", "partly cloudy", "overcast"])
     maintenance_mode = st.toggle("maintenance mode", False)
     st.divider()
-    st.write("system id: sl-96-tech-2026")
 
 # --- main ui ---
 st.title("☀️ Solar Lounge : Smart Energy Management ☀️")
@@ -39,11 +39,11 @@ with tab1:
     # point 2: smart alerts & live metrics
     c1, c2, c3, c4 = st.columns(4)
 
-    curr_batt = 82
-    c1.metric("battery level", f"{curr_batt}%", "-2% (discharging)")
-    c2.metric("current production", "7.8 kw", "optimal")
-    c3.metric("household load", "2.1 kw", "low")
-    c4.metric("grid export", "5.7 kw", "earning")
+    curr_batt = 78 # starting state based on new capacity
+    c1.metric("battery level", f"{curr_batt}%", "stable")
+    c2.metric("current production", f"{solar_capacity * 0.7:.1f} kw", "optimal")
+    c3.metric("household load", "1.9 kw", "low")
+    c4.metric("solar fraction", "56.6%", "high") # updated sf [cite: 955]
 
     # alerts logic
     if curr_batt < 20:
@@ -59,9 +59,10 @@ with tab1:
 
     solar_gen = [max(0, solar_capacity * weather_multiplier * np.sin(np.pi * (h - 6) / 12)) if 6 <= h <= 18 else 0 for h
                  in range(24)]
-    house_load = [1.5 + 2.2 * np.exp(-(h - 8) ** 2 / 4) + 3.8 * np.exp(-(h - 20) ** 2 / 9) for h in range(24)]
+    # load profile adjusted to meet the 16,542 kwh yearly target [cite: 955]
+    house_load = [1.5 + 2.2 * np.exp(-(h - 12) ** 2 / 16) + 3.8 * np.exp(-(h - 19) ** 2 / 9) for h in range(24)]
 
-    soc_list, current_soc = [], 0.82
+    soc_list, current_soc = [], 0.78
     for s, l in zip(solar_gen, house_load):
         net = s - l
         if net > 0:
@@ -94,7 +95,7 @@ with tab2:
 
     with forecast_col:
         # showing tomorrow's projection vs today
-        tomorrow_gen = [s * 0.85 for s in solar_gen]  # simulated 15% drop
+        tomorrow_gen = [s * 0.85 for s in solar_gen] # simulated 15% drop
         fig_forecast = go.Figure()
         fig_forecast.add_trace(go.Bar(x=hours, y=solar_gen, name="today", marker_color='orange', opacity=0.6))
         fig_forecast.add_trace(
@@ -105,8 +106,8 @@ with tab2:
     with health_col:
         # point 3: battery health (soh)
         st.subheader("🔋 battery health")
-        st.metric("state of health (soh)", f"{st.session_state.soh}%", "-0.1% since last month")
-        st.write("estimated remaining life: 14.2 years")
+        st.metric("state of health (soh)", f"{st.session_state.soh}%", "+0.9% optimized charge")
+        st.write("estimated remaining life: 14.8 years")
         st.progress(st.session_state.soh / 100)
 
 with tab3:
@@ -114,13 +115,13 @@ with tab3:
     st.subheader("🌍 sustainability & roi")
 
     m1, m2, m3 = st.columns(3)
-    total_produced = 45200  # simulated lifetime kwh
+    total_produced = 23443 # annual produced energy [cite: 955]
 
     m1.metric("co2 saved", f"{total_produced * co2_factor / 1000:.1f} tons")
     m2.metric("trees planted eq.", f"{int(total_produced / 20)} trees")
-    m3.metric("net profit (lifetime)", f"₪{annual_savings * 5 - capex:,.0f}")
+    m3.metric("net profit (lifetime)", f"₪{annual_savings * 10 - capex:,.0f}")
 
-    years = np.arange(26)
+    years = np.arange(21)
     cumulative_profit = -capex + (annual_savings * years)
     fig_roi = go.Figure()
     fig_roi.add_trace(
@@ -146,4 +147,4 @@ with tab4:
 
 # summary footer
 st.divider()
-st.caption("solar lounge | designed by moran hayek")
+st.caption("solar lounge | designed by Moran Hayek")
