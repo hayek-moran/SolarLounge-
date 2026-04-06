@@ -34,12 +34,13 @@ Based on the latest PVSyst simulation results, the "Solar Lounge" sets a new ben
 
 ---
 
-## 📂 Repository Structure
+# 📂 Repository Structure
 This repository contains the complete technical package for the **Solar Lounge** project:
-
-* 📄 **PVSyst_Technical_Report_V3.pdf**: Full engineering report including string sizing, 3D shading analysis, and meteorological data.
+* 📄 **PVSyst_Technical_Report.pdf**: Full engineering report including string sizing, 3D shading analysis, and meteorological data.
+* 📊 **Solar_Lounge_Briefing.pdf**: Executive summary of operational logic, storage strategy, and updated 25-year financial modeling.
+* 📐 **Solar_Lounge_Layout.dwg**: AutoCAD architectural and engineering layout, providing precise 2D/3D positioning for the 20 panels.
 * 📊 **Smart_EMS_Dashboard.py**: Streamlit-based Smart Energy Management System (EMS) for real-time telemetry and financial tracking.
-* 📸 **Project Visuals**: All images and renders provided represent simulation results, Dashboards, architectural design concepts, and before/after comparisons.
+* 📸 **Project Visuals**: A collection of images representing simulation results, dashboards, architectural design concepts, and before/after comparisons.
 * ⚡ **Solar_Lounge_SLD.jpg**: Single Line Diagram (SLD) of the microgrid's electrical and communication architecture.
 
 ---
