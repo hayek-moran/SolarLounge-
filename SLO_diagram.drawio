@@ -1,0 +1,126 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36">
+  <diagram name="‫עמוד-1‬" id="u38gfDMqc4YYwmtkvBaH">
+    <mxGraphModel dx="2820" dy="47" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="413" pageHeight="291" background="#ffffff" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="3l_gHf1r1xTBLL_0zpBH-1" parent="1" style="whiteSpace=wrap;strokeWidth=2;fillColor=light-dark(#eeeeee,#1f2020);strokeColor=light-dark(#999999,#cccccc);fontColor=light-dark(#333333,#cccccc);" value="Lounge Load Management" vertex="1">
+          <mxGeometry height="833" width="340" x="20" y="1660" as="geometry" />
+        </mxCell>
+        <mxCell id="3l_gHf1r1xTBLL_0zpBH-2" parent="1" style="whiteSpace=wrap;strokeWidth=2;fillColor=light-dark(#eeeeee,#1f2020);strokeColor=light-dark(#999999,#cccccc);fontColor=light-dark(#333333,#cccccc);" value="DC Generation &amp; Storage" vertex="1">
+          <mxGeometry height="680" width="330" x="708" y="1660" as="geometry" />
+        </mxCell>
+        <mxCell id="3l_gHf1r1xTBLL_0zpBH-3" parent="1" style="whiteSpace=wrap;strokeWidth=2;fillColor=light-dark(#eeeeee,#1f2020);strokeColor=light-dark(#999999,#cccccc);fontColor=light-dark(#333333,#cccccc);" value="Utility Grid 230V/400V" vertex="1">
+          <mxGeometry height="54" width="222" x="49" y="1324" as="geometry" />
+        </mxCell>
+        <mxCell id="3l_gHf1r1xTBLL_0zpBH-4" parent="1" style="whiteSpace=wrap;strokeWidth=2;fillColor=light-dark(#eeeeee,#1f2020);strokeColor=light-dark(#999999,#cccccc);fontColor=light-dark(#333333,#cccccc);" value="Bi-Directional Smart Meter" vertex="1">
+          <mxGeometry height="54" width="251" x="69" y="1532" as="geometry" />
+        </mxCell>
+        <mxCell id="3l_gHf1r1xTBLL_0zpBH-5" parent="1" style="whiteSpace=wrap;strokeWidth=2;fillColor=#fff4dd;strokeColor=#d4a017;fontColor=light-dark(#333333,#cccccc);" value="PV Array Configuration&#xa;4 Strings of 5x 680Wp modules&#xa;Total 13.6 kWp DC" vertex="1">
+          <mxGeometry height="126" width="260" x="743" y="1685" as="geometry" />
+        </mxCell>
+        <mxCell id="3l_gHf1r1xTBLL_0zpBH-6" parent="1" style="whiteSpace=wrap;strokeWidth=2;fillColor=#bbf;strokeColor=#33f;fontColor=light-dark(#333333,#cccccc);" value="LFP Battery Bank 14.3kWh" vertex="1">
+          <mxGeometry height="54" width="248" x="749" y="2249" as="geometry" />
+        </mxCell>
+        <mxCell id="3l_gHf1r1xTBLL_0zpBH-7" parent="1" style="rhombus;strokeWidth=4;whiteSpace=wrap;fillColor=#ff9;strokeColor=#f66;fontColor=light-dark(#333333,#cccccc);" value="Hybrid Inverter 10kW&#xa;Solis S6-EH3P10K2-H" vertex="1">
+          <mxGeometry height="278" width="278" x="395" y="1885" as="geometry" />
+        </mxCell>
+        <mxCell id="3l_gHf1r1xTBLL_0zpBH-8" parent="1" style="whiteSpace=wrap;strokeWidth=2;fillColor=light-dark(#eeeeee,#1f2020);strokeColor=light-dark(#999999,#cccccc);fontColor=light-dark(#333333,#cccccc);" value="Main AC Panel&#xa;Heavy Loads" vertex="1">
+          <mxGeometry height="78" width="260" x="65" y="1709" as="geometry" />
+        </mxCell>
+        <mxCell id="3l_gHf1r1xTBLL_0zpBH-9" parent="1" style="whiteSpace=wrap;strokeWidth=2;fillColor=#ffe6e6;strokeColor=#ff0000;fontColor=light-dark(#333333,#cccccc);" value="Critical Backup Panel&#xa;ATS Supported" vertex="1">
+          <mxGeometry height="78" width="260" x="65" y="2237" as="geometry" />
+        </mxCell>
+        <mxCell id="3l_gHf1r1xTBLL_0zpBH-10" parent="1" style="whiteSpace=wrap;strokeWidth=2;fillColor=light-dark(#eeeeee,#1f2020);strokeColor=light-dark(#999999,#cccccc);fontColor=light-dark(#333333,#cccccc);" value="Thermodynamic Heat Pump&#xa;300% Efficiency" vertex="1">
+          <mxGeometry height="78" width="260" x="55" y="2390" as="geometry" />
+        </mxCell>
+        <mxCell id="3l_gHf1r1xTBLL_0zpBH-11" parent="1" style="ellipse;aspect=fixed;strokeWidth=2;whiteSpace=wrap;fillColor=#cce5ff;strokeColor=#0066cc;fontColor=light-dark(#333333,#cccccc);dashed=1;dashPattern=5 5;" value="Smart EMS Dashboard&#xa;Streamlit V3" vertex="1">
+          <mxGeometry height="215" width="215" x="402" y="1243" as="geometry" />
+        </mxCell>
+        <mxCell id="3l_gHf1r1xTBLL_0zpBH-12" parent="1" style="whiteSpace=wrap;strokeWidth=2;fillColor=light-dark(#eeeeee,#1f2020);strokeColor=light-dark(#999999,#cccccc);fontColor=light-dark(#333333,#cccccc);" value="Essential Lighting" vertex="1">
+          <mxGeometry height="54" width="185" x="395" y="2402" as="geometry" />
+        </mxCell>
+        <mxCell id="3l_gHf1r1xTBLL_0zpBH-13" parent="1" style="whiteSpace=wrap;strokeWidth=2;fillColor=light-dark(#eeeeee,#1f2020);strokeColor=light-dark(#999999,#cccccc);fontColor=light-dark(#333333,#cccccc);" value="Router &amp; Security" vertex="1">
+          <mxGeometry height="54" width="186" x="630" y="2402" as="geometry" />
+        </mxCell>
+        <mxCell id="3l_gHf1r1xTBLL_0zpBH-14" edge="1" parent="1" source="3l_gHf1r1xTBLL_0zpBH-5" style="curved=1;startArrow=none;endArrow=block;exitX=0.5;exitY=1;entryX=1;entryY=0.24;rounded=0;" target="3l_gHf1r1xTBLL_0zpBH-7" value="13.6 kWp DC">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="873" y="1848" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="3l_gHf1r1xTBLL_0zpBH-15" edge="1" parent="1" source="3l_gHf1r1xTBLL_0zpBH-7" style="curved=1;startArrow=block;endArrow=block;exitX=1;exitY=0.76;entryX=0.5;entryY=0;rounded=0;" target="3l_gHf1r1xTBLL_0zpBH-6" value="DC Charging/Discharge">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="873" y="2200" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="3l_gHf1r1xTBLL_0zpBH-16" edge="1" parent="1" source="3l_gHf1r1xTBLL_0zpBH-3" style="curved=1;startArrow=block;endArrow=block;exitX=0.5;exitY=0.99;entryX=0.44;entryY=0;rounded=0;" target="3l_gHf1r1xTBLL_0zpBH-4" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="160" y="1495" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="3l_gHf1r1xTBLL_0zpBH-17" edge="1" parent="1" source="3l_gHf1r1xTBLL_0zpBH-4" style="curved=1;startArrow=block;endArrow=block;exitX=0.5;exitY=1;entryX=0.5;entryY=0;rounded=0;" target="3l_gHf1r1xTBLL_0zpBH-8" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="3l_gHf1r1xTBLL_0zpBH-18" edge="1" parent="1" source="3l_gHf1r1xTBLL_0zpBH-8" style="curved=1;startArrow=block;endArrow=block;exitX=0.5;exitY=1;entryX=0;entryY=0.24;rounded=0;" target="3l_gHf1r1xTBLL_0zpBH-7" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="195" y="1848" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="3l_gHf1r1xTBLL_0zpBH-19" edge="1" parent="1" source="3l_gHf1r1xTBLL_0zpBH-7" style="curved=1;startArrow=none;endArrow=block;exitX=0;exitY=0.76;entryX=0.5;entryY=0;rounded=0;" target="3l_gHf1r1xTBLL_0zpBH-9" value="ATS Backup Line">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="195" y="2200" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="3l_gHf1r1xTBLL_0zpBH-20" edge="1" parent="1" source="3l_gHf1r1xTBLL_0zpBH-9" style="curved=1;startArrow=none;endArrow=none;exitX=0.48;exitY=1;entryX=0.5;entryY=0;rounded=0;" target="3l_gHf1r1xTBLL_0zpBH-10" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="185" y="2340" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="3l_gHf1r1xTBLL_0zpBH-21" edge="1" parent="1" source="3l_gHf1r1xTBLL_0zpBH-9" style="curved=1;startArrow=none;endArrow=none;exitX=0.52;exitY=1;entryX=0;entryY=0.11;rounded=0;" target="3l_gHf1r1xTBLL_0zpBH-12" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="205" y="2340" />
+              <mxPoint x="205" y="2365" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="3l_gHf1r1xTBLL_0zpBH-22" edge="1" parent="1" source="3l_gHf1r1xTBLL_0zpBH-9" style="curved=1;startArrow=none;endArrow=none;exitX=0.69;exitY=1;entryX=0;entryY=0.25;rounded=0;" target="3l_gHf1r1xTBLL_0zpBH-13" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="278" y="2340" />
+              <mxPoint x="278" y="2365" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="3l_gHf1r1xTBLL_0zpBH-23" edge="1" parent="1" source="3l_gHf1r1xTBLL_0zpBH-11" style="curved=1;dashed=1;dashPattern=2 3;startArrow=none;endArrow=none;exitX=0.58;exitY=1;entryX=0.5;entryY=0;rounded=0;" target="3l_gHf1r1xTBLL_0zpBH-7" value="Real-time Monitoring">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="534" y="1495" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="3l_gHf1r1xTBLL_0zpBH-24" edge="1" parent="1" source="3l_gHf1r1xTBLL_0zpBH-11" style="curved=1;dashed=1;dashPattern=2 3;startArrow=none;endArrow=none;exitX=0;exitY=0.9;entryX=0.73;entryY=0;rounded=0;" target="3l_gHf1r1xTBLL_0zpBH-4" value="Grid Analytics">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="330" y="1495" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
