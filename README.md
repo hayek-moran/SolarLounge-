@@ -3,7 +3,7 @@
 ## 🎓 Project Overview
 **Author:** Moran Hayek | Computer Engineering Student at the **Technion - Israel Institute of Technology** 🏛️  
 **Location:** Northern District, Israel 📍  
-**Simulation Date:** April 06, 2026  
+**Simulation Date:** March-April, 2026  
 **Status:** Detailed Design & Engineering Specification Phase (Optimized) 🏗️
 
 This project represents a high-premium architectural and engineering transformation of a 96m² residential rooftop. By integrating an **oversized** photovoltaic array with optimized smart energy storage, the design achieves superior energy independence and creates a luxury "Off-Grid" living environment. 🔋✨
@@ -38,7 +38,7 @@ Based on the latest PVSyst simulation results, the "Solar Lounge" sets a new ben
 This repository contains the complete technical package for the **Solar Lounge** project:
 * 📄 **PVSyst_Technical_Report.pdf**: Full engineering report including string sizing, 3D shading analysis, and meteorological data.
 * 📊 **Solar_Lounge_Briefing.pdf**: Executive summary of operational logic, storage strategy, and updated 25-year financial modeling.
-* 📐 **Solar_Lounge_Layout.dwg**: AutoCAD architectural and engineering layout, providing precise 2D/3D positioning for the 20 panels.
+* 📐 **SolarLounge.dwg**: AutoCAD architectural and engineering layout, providing precise 2D/3D positioning for the 20 panels.
 * 📊 **solar_app.py**: Streamlit-based Smart Energy Management System (EMS) for real-time telemetry and financial tracking.
 * 📸 **Project Visuals**: A collection of images representing simulation results, dashboards, architectural design concepts, and before/after comparisons.
 * ⚡ **Solar_Lounge_SLD.jpg**: Single Line Diagram (SLD) of the microgrid's electrical and communication architecture.
